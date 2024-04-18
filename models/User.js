@@ -3,26 +3,26 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    firstName: {
-      type: String,
-      required: [true, " Please enter your firstName 🥴"],
-    },
-    lastName: {
-      type: String,
-      required: [true, "Please enter your lastName 🥴 "],
-    },
-    address: {
-      type: String,
-      required: [true, "Please enter your address 📢 "],
-    },
+    // firstName: {
+    //   type: String,
+    //   required: [true, " Please enter your firstName 🥴"],
+    // },
+    // lastName: {
+    //   type: String,
+    //   required: [true, "Please enter your lastName 🥴 "],
+    // },
+    // address: {
+    //   type: String,
+    //   required: [true, "Please enter your address 📢 "],
+    // },
     // city: {
     //   type: String,
     //   required: [true, "Please enter your city 🏙️"],
     // },
-    number: {
-      type: String,
-      required: [true, "Please enter your number 📱 "],
-    },
+    // number: {
+    //   type: String,
+    //   required: [true, "Please enter your number 📱 "],
+    // },
 
     userName: {
       type: String,

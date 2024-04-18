@@ -3,8 +3,8 @@ const route = express.Router();
 const verifiedToken = require("../../middlewares/verifyToken");
 const upload = require("../../middlewares/multer");
 
-// register
-// route.post("/register", require("./register"));
+// signup
+route.post("/signup", require("./signup"));
 
 // login
 route.post("/login", require("./login"));
