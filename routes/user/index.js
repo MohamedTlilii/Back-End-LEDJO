@@ -9,6 +9,8 @@ route.post("/signup", require("./signup"));
 route.post("/login", require("./login"));
 // get products
 route.get("/getProducts", require("./getProducts"));
+// get single product
+route.get("/getSingleProduct/:id", require("./getSingleProduct"));
 
 
 
