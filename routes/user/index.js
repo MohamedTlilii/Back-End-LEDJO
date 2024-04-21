@@ -11,6 +11,9 @@ route.post("/login", require("./login"));
 route.get("/getProducts", require("./getProducts"));
 // get single product
 route.get("/getSingleProduct/:id", require("./getSingleProduct"));
+// get information
+route.get("/getInformation", verifiedToken, require("./GetInformation"));
+
 
 
 
