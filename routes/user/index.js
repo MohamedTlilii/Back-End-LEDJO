@@ -13,7 +13,12 @@ route.get("/getProducts", require("./getProducts"));
 route.get("/getSingleProduct/:id", require("./getSingleProduct"));
 // get information
 route.get("/getInformation", verifiedToken, require("./GetInformation"));
-
+// addProductToCart
+route.post(
+    "/addProductToCart/:productId",
+    verifiedToken,
+    require("./addProductToCart")
+  );
 
 
 
