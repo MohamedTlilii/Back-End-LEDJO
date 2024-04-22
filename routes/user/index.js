@@ -15,11 +15,10 @@ route.get("/getSingleProduct/:id", require("./getSingleProduct"));
 route.get("/getInformation", verifiedToken, require("./GetInformation"));
 // addProductToCart
 route.post(
-    "/addProductToCart/:productId",
-    verifiedToken,
-    require("./addProductToCart")
-  );
-
+  "/addProductToCart/:productId",
+  verifiedToken,
+  require("./addProductToCart")
+);
 
 // update user photo
 route.put(
@@ -28,49 +27,34 @@ route.put(
   upload.single("photo"),
   require("./updatePhoto")
 );
-  // update information
-  route.put("/updateInformation", verifiedToken, require("./updateInformation"));
-
-
-
-
-
-
-
-
-
-
-
-
+// update information
+route.put("/updateInformation", verifiedToken, require("./updateInformation"));
 
 //  get Own Cart
 route.get("/getOwnCart", verifiedToken, require("./getOwnCart"));
 
-
-  // delete cart
-  route.delete("/deleteCart", verifiedToken, require("./restartCart"));
-
+// delete cart
+route.delete("/deleteCart", verifiedToken, require("./restartCart"));
 
 // update product quantity from cart
 route.put(
-    "/incProductQuantityFromCart/:productId",
-    verifiedToken,
-    require("./incProductQuantityFromCart")
-  );
-  
-  // update product quantity from cart
-  route.put(
-    "/decProductQuantityFromCart/:productId",
-    verifiedToken,
-    require("./decProductQuantityFromCart")
-  );
-  // delete product from cart
+  "/incProductQuantityFromCart/:productId",
+  verifiedToken,
+  require("./incProductQuantityFromCart")
+);
+
+// update product quantity from cart
+route.put(
+  "/decProductQuantityFromCart/:productId",
+  verifiedToken,
+  require("./decProductQuantityFromCart")
+);
+// delete product from cart
 route.delete(
-    "/removeProductFromCart/:productId",
-    verifiedToken,
-    require("./removeProductFromCart")
-  );
-  
+  "/removeProductFromCart/:productId",
+  verifiedToken,
+  require("./removeProductFromCart")
+);
 
 //  create Order
 route.post("/createOrder", verifiedToken, require("./createOrder"));
