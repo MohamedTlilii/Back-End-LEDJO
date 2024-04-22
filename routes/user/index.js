@@ -21,6 +21,16 @@ route.post(
   );
 
 
+// update user photo
+route.put(
+  "/updatePhoto",
+  verifiedToken,
+  upload.single("photo"),
+  require("./updatePhoto")
+);
+  // update information
+  route.put("/updateInformation", verifiedToken, require("./updateInformation"));
+
 
 
 
@@ -35,6 +45,11 @@ route.post(
 
 //  get Own Cart
 route.get("/getOwnCart", verifiedToken, require("./getOwnCart"));
+
+
+  // delete cart
+  route.delete("/deleteCart", verifiedToken, require("./restartCart"));
+
 
 // update product quantity from cart
 route.put(
@@ -56,8 +71,6 @@ route.delete(
     require("./removeProductFromCart")
   );
   
-  // delete cart
-  route.delete("/deleteCart", verifiedToken, require("./restartCart"));
 
 //  create Order
 route.post("/createOrder", verifiedToken, require("./createOrder"));
